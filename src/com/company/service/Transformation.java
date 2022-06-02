@@ -8,6 +8,16 @@ import java.util.stream.Collectors;
 
 public class Transformation {
 
+    public String getMessage(List<Double> list) {
+        Double aDouble = checkList(list);
+        if (aDouble != null) {
+            return ("Результат - " + aDouble);
+        }
+        else {
+            return ("Невалидные данные");
+        }
+    }
+
     public Double checkList(List<Double> list){
         double double0 = list.get(0);
         double double1 = list.get(1);
@@ -34,5 +44,4 @@ public class Transformation {
         }
         return result;
     }
-
 }
